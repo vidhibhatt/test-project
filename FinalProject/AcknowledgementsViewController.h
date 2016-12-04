@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface AcknowledgementsViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *barButton;
+
+
 
 @end

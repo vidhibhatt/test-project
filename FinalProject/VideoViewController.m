@@ -7,6 +7,9 @@
 //
 
 #import "VideoViewController.h"
+#import "SWRevealViewController.h"
+#import <AVFoundation/AVFoundation.h>
+#import <AVKit/AVKit.h>
 
 @interface VideoViewController ()
 
@@ -17,11 +20,28 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    SWRevealViewController *revealViewController = self.revealViewController;
+    if ( revealViewController )
+    {
+        [_barButton setTarget: self.revealViewController];
+        [_barButton setAction: @selector( revealToggle: )];
+        [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)playPressed:(UIButton *)sender {
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"video" ofType:@"mp4"];
+    NSURL *videoURL = [NSURL fileURLWithPath:filePath];
+    //filePath may be from the Bundle or from the Saved file Directory, it is just the path for the video
+    AVPlayer *player = [AVPlayer playerWithURL:videoURL];
+    AVPlayerViewController *playerViewController = [AVPlayerViewController new];
+    playerViewController.player = player;
+    //[playerViewController.player play];//Used to Play On start
+    [self presentViewController:playerViewController animated:YES completion:nil];
 }
 
 /*

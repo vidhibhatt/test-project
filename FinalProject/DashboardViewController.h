@@ -10,4 +10,12 @@
 
 @interface DashboardViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *barButton;
+
+@property (weak, nonatomic) IBOutlet UILabel *currentDateLabel;
+@property (weak, nonatomic) IBOutlet UILabel *goalLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *intakeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *successLabel;
+
 @end

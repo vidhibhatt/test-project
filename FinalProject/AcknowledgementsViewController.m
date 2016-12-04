@@ -7,16 +7,39 @@
 //
 
 #import "AcknowledgementsViewController.h"
+#import "SWRevealViewController.h"
 
 @interface AcknowledgementsViewController ()
 
 @end
 
-@implementation AcknowledgementsViewController
+@implementation AcknowledgementsViewController{
+    // Links
+    NSString *hamburger;
+    NSString *video;
+
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    SWRevealViewController *revealViewController = self.revealViewController;
+    if ( revealViewController )
+    {
+        [_barButton setTarget: self.revealViewController];
+        [_barButton setAction: @selector( revealToggle: )];
+        [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    }
+    [self initStrings];
+}
+
+// method to initialize strings for links
+-(void)initStrings{
+    // Overall app
+    hamburger = @"https://github.com/John-Lluch/SWRevealViewController";
+    
+    // Video
+    
 }
 
 - (void)didReceiveMemoryWarning {

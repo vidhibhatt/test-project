@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface VideoViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *barButton;
 
 @end
