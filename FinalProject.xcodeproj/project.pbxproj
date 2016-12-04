@@ -15,6 +15,15 @@
 		22EBF8B31DF46F2C009D0C8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22EBF8B11DF46F2C009D0C8D /* LaunchScreen.storyboard */; };
 		22EBF8BE1DF46F2C009D0C8D /* FinalProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22EBF8BD1DF46F2C009D0C8D /* FinalProjectTests.m */; };
 		22EBF8C91DF46F2C009D0C8D /* FinalProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22EBF8C81DF46F2C009D0C8D /* FinalProjectUITests.m */; };
+		22EBF8DA1DF4747D009D0C8D /* DashboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22EBF8D91DF4747D009D0C8D /* DashboardViewController.m */; };
+		22EBF8DD1DF477F7009D0C8D /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22EBF8DC1DF477F7009D0C8D /* SWRevealViewController.m */; };
+		22EBF8E01DF47A82009D0C8D /* HamburgerMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22EBF8DF1DF47A82009D0C8D /* HamburgerMenuViewController.m */; };
+		22EBF8E31DF48255009D0C8D /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22EBF8E21DF48255009D0C8D /* VideoViewController.m */; };
+		22EBF8E61DF48270009D0C8D /* AcknowledgementsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22EBF8E51DF48270009D0C8D /* AcknowledgementsViewController.m */; };
+		22EBF8E81DF48C59009D0C8D /* video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 22EBF8E71DF48C59009D0C8D /* video.mp4 */; };
+		22EBF8EC1DF4A928009D0C8D /* WaterIntakeByDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22EBF8EB1DF4A928009D0C8D /* WaterIntakeByDate.m */; };
+		22EBF8EE1DF4C8AE009D0C8D /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 22EBF8ED1DF4C8AE009D0C8D /* libsqlite3.tbd */; };
+		22EBF8F11DF4CF28009D0C8D /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 22EBF8F01DF4CF28009D0C8D /* DBManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +60,22 @@
 		22EBF8C41DF46F2C009D0C8D /* FinalProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinalProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22EBF8C81DF46F2C009D0C8D /* FinalProjectUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FinalProjectUITests.m; sourceTree = "<group>"; };
 		22EBF8CA1DF46F2C009D0C8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22EBF8D81DF4747D009D0C8D /* DashboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashboardViewController.h; sourceTree = "<group>"; };
+		22EBF8D91DF4747D009D0C8D /* DashboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashboardViewController.m; sourceTree = "<group>"; };
+		22EBF8DB1DF477F7009D0C8D /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		22EBF8DC1DF477F7009D0C8D /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		22EBF8DE1DF47A82009D0C8D /* HamburgerMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HamburgerMenuViewController.h; sourceTree = "<group>"; };
+		22EBF8DF1DF47A82009D0C8D /* HamburgerMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HamburgerMenuViewController.m; sourceTree = "<group>"; };
+		22EBF8E11DF48255009D0C8D /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
+		22EBF8E21DF48255009D0C8D /* VideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
+		22EBF8E41DF48270009D0C8D /* AcknowledgementsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcknowledgementsViewController.h; sourceTree = "<group>"; };
+		22EBF8E51DF48270009D0C8D /* AcknowledgementsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcknowledgementsViewController.m; sourceTree = "<group>"; };
+		22EBF8E71DF48C59009D0C8D /* video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video.mp4; sourceTree = "<group>"; };
+		22EBF8EA1DF4A928009D0C8D /* WaterIntakeByDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterIntakeByDate.h; sourceTree = "<group>"; };
+		22EBF8EB1DF4A928009D0C8D /* WaterIntakeByDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterIntakeByDate.m; sourceTree = "<group>"; };
+		22EBF8ED1DF4C8AE009D0C8D /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		22EBF8EF1DF4CF28009D0C8D /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
+		22EBF8F01DF4CF28009D0C8D /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22EBF8EE1DF4C8AE009D0C8D /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,14 +127,27 @@
 		22EBF8A21DF46F2C009D0C8D /* FinalProject */ = {
 			isa = PBXGroup;
 			children = (
+				22EBF8F21DF4CF35009D0C8D /* DBManager */,
+				22EBF8ED1DF4C8AE009D0C8D /* libsqlite3.tbd */,
+				22EBF8E91DF4A8FB009D0C8D /* Model */,
 				22EBF8A61DF46F2C009D0C8D /* AppDelegate.h */,
 				22EBF8A71DF46F2C009D0C8D /* AppDelegate.m */,
 				22EBF8A91DF46F2C009D0C8D /* ViewController.h */,
 				22EBF8AA1DF46F2C009D0C8D /* ViewController.m */,
 				22EBF8AC1DF46F2C009D0C8D /* Main.storyboard */,
-				22EBF8AF1DF46F2C009D0C8D /* Assets.xcassets */,
+				22EBF8DE1DF47A82009D0C8D /* HamburgerMenuViewController.h */,
+				22EBF8DF1DF47A82009D0C8D /* HamburgerMenuViewController.m */,
+				22EBF8D81DF4747D009D0C8D /* DashboardViewController.h */,
+				22EBF8D91DF4747D009D0C8D /* DashboardViewController.m */,
+				22EBF8E11DF48255009D0C8D /* VideoViewController.h */,
+				22EBF8E21DF48255009D0C8D /* VideoViewController.m */,
+				22EBF8E41DF48270009D0C8D /* AcknowledgementsViewController.h */,
+				22EBF8E51DF48270009D0C8D /* AcknowledgementsViewController.m */,
+				22EBF8DB1DF477F7009D0C8D /* SWRevealViewController.h */,
+				22EBF8DC1DF477F7009D0C8D /* SWRevealViewController.m */,
 				22EBF8B11DF46F2C009D0C8D /* LaunchScreen.storyboard */,
 				22EBF8B41DF46F2C009D0C8D /* Info.plist */,
+				22EBF8AF1DF46F2C009D0C8D /* Assets.xcassets */,
 				22EBF8A31DF46F2C009D0C8D /* Supporting Files */,
 			);
 			path = FinalProject;
@@ -118,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				22EBF8A41DF46F2C009D0C8D /* main.m */,
+				22EBF8E71DF48C59009D0C8D /* video.mp4 */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -138,6 +178,24 @@
 				22EBF8CA1DF46F2C009D0C8D /* Info.plist */,
 			);
 			path = FinalProjectUITests;
+			sourceTree = "<group>";
+		};
+		22EBF8E91DF4A8FB009D0C8D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				22EBF8EA1DF4A928009D0C8D /* WaterIntakeByDate.h */,
+				22EBF8EB1DF4A928009D0C8D /* WaterIntakeByDate.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		22EBF8F21DF4CF35009D0C8D /* DBManager */ = {
+			isa = PBXGroup;
+			children = (
+				22EBF8EF1DF4CF28009D0C8D /* DBManager.h */,
+				22EBF8F01DF4CF28009D0C8D /* DBManager.m */,
+			);
+			name = DBManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,6 +301,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22EBF8E81DF48C59009D0C8D /* video.mp4 in Resources */,
 				22EBF8B31DF46F2C009D0C8D /* LaunchScreen.storyboard in Resources */,
 				22EBF8B01DF46F2C009D0C8D /* Assets.xcassets in Resources */,
 				22EBF8AE1DF46F2C009D0C8D /* Main.storyboard in Resources */,
@@ -272,7 +331,14 @@
 			files = (
 				22EBF8AB1DF46F2C009D0C8D /* ViewController.m in Sources */,
 				22EBF8A81DF46F2C009D0C8D /* AppDelegate.m in Sources */,
+				22EBF8E61DF48270009D0C8D /* AcknowledgementsViewController.m in Sources */,
+				22EBF8DD1DF477F7009D0C8D /* SWRevealViewController.m in Sources */,
 				22EBF8A51DF46F2C009D0C8D /* main.m in Sources */,
+				22EBF8EC1DF4A928009D0C8D /* WaterIntakeByDate.m in Sources */,
+				22EBF8E31DF48255009D0C8D /* VideoViewController.m in Sources */,
+				22EBF8DA1DF4747D009D0C8D /* DashboardViewController.m in Sources */,
+				22EBF8E01DF47A82009D0C8D /* HamburgerMenuViewController.m in Sources */,
+				22EBF8F11DF4CF28009D0C8D /* DBManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
