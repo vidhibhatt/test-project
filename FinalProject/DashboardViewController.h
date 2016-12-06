@@ -13,9 +13,15 @@
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *barButton;
 
 @property (weak, nonatomic) IBOutlet UILabel *currentDateLabel;
-@property (weak, nonatomic) IBOutlet UILabel *goalLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *testGlassImage;
+
 
 @property (weak, nonatomic) IBOutlet UILabel *intakeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *successLabel;
+
+@property BOOL isUpdateQuery;
+
+
+- (BOOL) isRecordPresent;
 
 @end
