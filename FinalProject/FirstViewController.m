@@ -7,6 +7,8 @@
 //
 
 #import "FirstViewController.h"
+#import "BAFluidView.h"
+#import "UIColor+ColorWithHex.h"
 
 @interface FirstViewController ()
 
@@ -17,6 +19,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    BAFluidView *view = [[BAFluidView alloc] initWithFrame:self.view.frame];
+    [view fillTo:@0.5];
+    view.fillColor = [UIColor colorWithHex:0x397ebe];
+    [view startAnimation];
+    [self.view addSubview:view];
 }
 
 - (void)didReceiveMemoryWarning {
