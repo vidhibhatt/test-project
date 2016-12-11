@@ -7,9 +7,13 @@
 //
 
 #import "AppDelegate.h"
+#import "DBManager.h"
+#import "Chameleon.h"
+#import "SCLAlertView.h"
+#import <Parse/Parse.h>
 
 @interface AppDelegate ()
-
+@property (nonatomic, strong) DBManager *dbManager;
 @end
 
 @implementation AppDelegate
@@ -17,7 +21,44 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    // Initialize the dbManager object.
+    //self.dbManager = [[DBManager alloc] initWithDatabaseFilename:@"sampledb.sql"];
+    // Override point for customization after application launch.
+    [Parse initializeWithConfiguration:[ParseClientConfiguration configurationWithBlock:^(id<ParseMutableClientConfiguration> configuration) {
+        configuration.applicationId = @"vLViN7GEenHLi6DQaQbj4zELcIYMcrFewBKIohaP";
+        configuration.clientKey = @"fORrj2XuJYyDI38NgHragjjSjNoYaWlDUBLmB32a";
+        configuration.server = @"https://parseapi.back4app.com";
+        configuration.localDatastoreEnabled = YES; // If you need to enable local data store
+    }]];
     return YES;
+    
+    
+    //Set global theme
+    //[Chameleon setGlobalThemeUsingPrimaryColor:FlatSkyBlue withSecondaryColor:FlatTeal andContentStyle:UIContentStyleContrast];
+    
+    
+    //return YES;
+}
+
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
+{
+    UIApplicationState state = [application applicationState];
+    if (state == UIApplicationStateActive) {
+       /* UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Reminder"
+                                                        message:notification.alertBody
+                                                       delegate:self cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];*/
+        
+        SCLAlertView *alert = [[SCLAlertView alloc] initWithNewWindow];
+        [alert showInfo:@"Reminder" subTitle:@"Just a reminder to drink a glass of water" closeButtonTitle:@"Done" duration:0.0f];
+    }
+    
+    // Request to reload table view data
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"reloadData" object:self];
+    
+    // Set icon badge number to zero
+    application.applicationIconBadgeNumber = 0;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface ShareOnSocialMediaViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *barButton;
+@property (strong, nonatomic) IBOutlet UIView *socialMediaView;
+@property (weak, nonatomic) IBOutlet UIButton *twitterButton;
 
 @end

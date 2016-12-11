@@ -8,6 +8,9 @@
 
 #import "AcknowledgementsViewController.h"
 #import "SWRevealViewController.h"
+#import "Chameleon.h"
+#import "BAFluidView.h"
+#import "UIColor+ColorWithHex.h"
 
 @interface AcknowledgementsViewController ()
 
@@ -17,6 +20,8 @@
     // Links
     NSString *hamburger;
     NSString *video;
+    NSString *socialMedia;
+    BAFluidView *fluidview;
 
 }
 
@@ -31,6 +36,23 @@
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     }
     [self initStrings];
+    
+    NSMutableArray *colors = [NSMutableArray array];
+    [colors addObject:FlatWhite];
+    [colors addObject:FlatPowderBlue];
+    
+    _ackView.backgroundColor = GradientColor(UIGradientStyleRadial, _ackView.bounds, colors);
+    [self setupFluidView];
+}
+
+-(void) setupFluidView{
+    fluidview = [[BAFluidView alloc] initWithFrame:self.view.frame];
+    fluidview.fillRepeatCount = 1;
+    fluidview.fillAutoReverse = NO;
+    [fluidview fillTo:@0.02];
+    fluidview.fillColor = [UIColor colorWithHex:0x397ebe];
+    [fluidview startAnimation];
+    [_ackView insertSubview:fluidview atIndex:0];
 }
 
 // method to initialize strings for links
@@ -40,6 +62,8 @@
     
     // Video
     
+    // social media
+    socialMedia = @"http://www.appcoda.com/ios-programming-101-integrate-twitter-and-facebook-sharing-in-ios-6/";
 }
 
 - (void)didReceiveMemoryWarning {

@@ -8,14 +8,21 @@
 
 #import "VideoViewController.h"
 #import "SWRevealViewController.h"
+#import "JRMFloatingAnimationView.h"
 #import <AVFoundation/AVFoundation.h>
 #import <AVKit/AVKit.h>
+#import "Chameleon.h"
+#import "BAFluidView.h"
+#import "UIColor+ColorWithHex.h"
 
 @interface VideoViewController ()
+@property (strong, nonatomic) JRMFloatingAnimationView *floatingView;
 
 @end
 
-@implementation VideoViewController
+@implementation VideoViewController{
+BAFluidView *fluidview;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -27,7 +34,33 @@
         [_barButton setAction: @selector( revealToggle: )];
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     }
+    
+    NSMutableArray *colors = [NSMutableArray array];
+    [colors addObject:FlatWhite];
+    [colors addObject:FlatPowderBlue];
+    
+    _benefitsView.backgroundColor = GradientColor(UIGradientStyleRadial, _benefitsView.bounds, colors);
+
+    /*self.floatingView = [[JRMFloatingAnimationView alloc] initWithStartingPoint:[_seeVideoBtn center]];
+    [self.floatingView addImage:[UIImage imageNamed:@"bubble"]];
+    [self.view addSubview:self.floatingView];
+    [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(animate) userInfo:nil repeats:YES];*/
+    //[self setupFluidView];
 }
+
+-(void) setupFluidView{
+    fluidview = [[BAFluidView alloc] initWithFrame:self.view.frame];
+    fluidview.fillRepeatCount = 1;
+    fluidview.fillAutoReverse = NO;
+    [fluidview fillTo:@0.05];
+    fluidview.fillColor = [UIColor colorWithHex:0x397ebe];
+    [fluidview startAnimation];
+    [_benefitsView sendSubviewToBack:fluidview];
+}
+    
+- (void)animate {
+        [self.floatingView animate];
+    }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -41,7 +74,9 @@
     AVPlayerViewController *playerViewController = [AVPlayerViewController new];
     playerViewController.player = player;
     //[playerViewController.player play];//Used to Play On start
+    self.modalPresentationStyle = UIModalPresentationPopover;
     [self presentViewController:playerViewController animated:YES completion:nil];
+    
 }
 
 /*

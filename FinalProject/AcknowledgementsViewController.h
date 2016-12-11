@@ -10,6 +10,7 @@
 
 @interface AcknowledgementsViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *barButton;
+@property (strong, nonatomic) IBOutlet UIView *ackView;
 
 
 

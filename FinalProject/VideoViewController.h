@@ -10,5 +10,7 @@
 
 @interface VideoViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *barButton;
+    @property (weak, nonatomic) IBOutlet UIButton *seeVideoBtn;
+@property (strong, nonatomic) IBOutlet UIView *benefitsView;
 
 @end
